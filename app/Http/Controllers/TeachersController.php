@@ -28,12 +28,13 @@ class TeachersController extends Controller
     public function store(Request $request)
     {
         $teacher = new Teacher();
+    
         $teacher -> userName = $request -> input('userName');
         $teacher -> email = $request -> input('email');
         $teacher -> password = $request -> input('password');
         $teacher -> save();
 
-        echo json_encode($teacher);
+       
     }
 
     /**
